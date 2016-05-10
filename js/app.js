@@ -1,5 +1,5 @@
 
-angular.module('tyru', ['treeControl'])
+angular.module('tyru', ['treeControl', 'ui.bootstrap'])
 .controller('MainCtrl', ['$http', '$timeout', function ($http, $timeout) {
   var ctrl = this;
 
