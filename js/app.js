@@ -35,10 +35,14 @@ angular.module('tyru', ['treeControl', 'ui.bootstrap'])
     $timeout(function() { doFetch(node) }, ctrl.loadingTime);
   };
 
-  $http.get('data/root.json')
-    .success(function(data) {
-      ctrl.treeModel = data;
-    });
+  ctrl.resetTreeModel = function resetTreeModel() {
+    // Fetch root child nodes.
+    $http.get('data/root.json')
+      .success(function(data) {
+        ctrl.treeModel = data;
+      });
+  };
+  ctrl.resetTreeModel();
 
 }]);
 
