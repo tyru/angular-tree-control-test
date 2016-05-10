@@ -25,12 +25,32 @@
       Fake Loading Time: <input type=number ng-model='$ctrl.loadingTime'> ms
       <br>
       <br>
+
+      <h2>Classic Theme (class="tree-classic")</h2>
       <treecontrol class="tree-classic"
       tree-model="$ctrl.treeModel"
       on-node-toggle="$ctrl.fetchChildNodes(node, expanded)"
       options="$ctrl.treeOptions">
       {{node.name}}
       </treecontrol>
+
+      <h2>Light Theme (class="tree-light")</h2>
+      <treecontrol class="tree-light"
+      tree-model="$ctrl.treeModel"
+      on-node-toggle="$ctrl.fetchChildNodes(node, expanded)"
+      options="$ctrl.treeOptions">
+      {{node.name}}
+      </treecontrol>
+
+      <h2>Dark Theme (class="tree-dark")</h2>
+      <div style="background-color: #555;">
+        <treecontrol class="tree-dark"
+        tree-model="$ctrl.treeModel"
+        on-node-toggle="$ctrl.fetchChildNodes(node, expanded)"
+        options="$ctrl.treeOptions">
+        {{node.name}}
+        </treecontrol>
+      </div>
     </div>
 
     <tyru-footer lastchange='Last Change: 11-May-2016.'></tyru-footer>
