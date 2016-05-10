@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- vim:set ts=2 sw=2 sts=2 tw=0 et: -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+    <meta name="keywords" content="Vim,Java,JavaScript,Perl,tyru,Takuya Fujiwara,藤原 拓也" />
+    <meta name="description" content="not not" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="tyru" />
+    <meta name="generator" content="Vim" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/tree-control.css" />
+    <link rel="stylesheet" href="css/tree-control-attribute.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title></title>
+
+  </head>
+  <body ng-app='tyru'>
+    <div ng-controller='MainCtrl as $ctrl'>
+      Fake Loading Time: <input type=number ng-model='$ctrl.loadingTime'> ms
+      <br>
+      <br>
+      <treecontrol class="tree-classic"
+      tree-model="$ctrl.treeModel"
+      on-node-toggle="$ctrl.fetchChildNodes(node, expanded)"
+      options="$ctrl.treeOptions">
+      {{node.name}}
+      </treecontrol>
+    </div>
+
+    <tyru-footer lastchange='Last Change: 11-May-2016.'></tyru-footer>
+
+    <script src="/lib/angular-1.5.5/angular.js"></script>
+    <script src="js/angular-tree-control.js"></script>
+    <script src="js/app.js"></script>
+    <script src="/component/tyru-footer/tyru-footer.js"></script>
+  </body>
+</html>
+
