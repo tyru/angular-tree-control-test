@@ -58,6 +58,14 @@
         </treecontrol>
       </div>
 
+      <h2>No Theme</h2>
+      <treecontrol
+      tree-model="$ctrl.treeModel"
+      on-node-toggle="$ctrl.fetchChildNodes(node, expanded)"
+      options="$ctrl.treeOptions">
+      {{node.name}}
+      </treecontrol>
+
       <br>
       <br>
       <br>
